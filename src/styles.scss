@@ -1,1 +1,87 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+// Variables //
+$firstColor: #FFBCBC;
+$secondColor: #424242;
+$thirdColor: #0E0E0E;
+$fourthColor: #F5F4EF;
+$fifthColor: #707070;
+
+
+// Classes //
+a
+{
+  text-decoration: none !important;
+}
+ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// PlaceHolders //
+%absolute
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+%fixed-section-padding
+{
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+%main-title-style
+{
+  text-transform: uppercase;
+  text-align: center;
+  color: $fourthColor;
+  text-shadow: 1px 1px 3px $thirdColor;
+  font-size: 40px;
+}
+%icon-holders
+{
+  position: relative;
+  width: 150px;
+  margin: 0 auto;
+  .scissor-icon
+  {
+    height: 15px;
+    width: 15px;
+  }
+  &::after, &::before
+  {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: $firstColor;
+    display: inline-block;
+    top: 12px;
+  }
+  &::after
+  {
+    right: 0;
+  }
+  &::before
+  {
+    left: 0;
+  }
+}
+body
+{
+  @font-face
+  {
+    font-family: 'GE SS Two';
+  }
+  [dir=rtl] & {
+    font-family: 'GE SS Two' , sans-serif;
+  }
+}
+
 /* You can add global styles to this file, and also import other style files */
