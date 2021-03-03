@@ -1,0 +1,99 @@
+@import "../../../../styles.scss";
+
+.navbar
+{
+  background-color: $thirdColor;
+  .navbar-brand
+  {
+    .main-logo
+    {
+      height: 50px;
+    }
+  }
+  .navbar-toggler
+  {
+    border-color: rgb(255,255,255);
+    .navbar-toggler-icon
+    {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+  .collapse
+  {
+    .navbar-nav
+    {
+      .nav-item
+      {
+        .nav-link
+        {
+          text-transform: uppercase;
+          color: $fourthColor;
+          transition: all .5s;
+          font-size: 14px;
+        }
+        .titles
+        {
+          &:hover
+          {
+            color: $firstColor;
+          }
+        }
+        .break
+        {
+          margin-right: 2em;
+        }
+        .ml
+        {
+          margin-left: 10px;
+        }
+        .btns
+        {
+          background-color: #d59898;
+          border-radius: 15px;
+          padding: 8px 13px;
+          display: inline-block;
+          &:hover
+          {
+            background-color: #b07979;
+          }
+        }
+        .lang
+        {
+          border: 2px solid $secondColor;
+          padding: 6px;
+          transition: all .5s;
+          &:hover
+          {
+            border: 2px solid $firstColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Start Media Query //
+@include media-breakpoint-down(md)
+{
+  .break
+  {
+    margin-right: 0 !important;
+  }
+  .ml
+  {
+    margin-left: 0 !important;
+  }
+  .appointment
+  {
+    margin-top: 10px;
+  }
+  li
+  {
+    text-align: center;
+  }
+  .lang
+  {
+    margin-top: .5em;
+    display: inline-block;
+  }
+}
