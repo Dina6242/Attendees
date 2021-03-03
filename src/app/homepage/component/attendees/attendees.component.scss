@@ -1,0 +1,227 @@
+@import "../../../../styles.scss";
+
+.login
+{
+  background-color: $secondColor;
+  position: relative;
+  .main-overlay
+  {
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: .5;
+  }
+  .holder
+  {
+    position: relative;
+    z-index: 3;
+    padding: 3em 0 5em;
+    .main-title
+    {
+      @extend  %main-title-style;
+    }
+    .icon-holder
+    {
+      text-align: center;
+      @extend %icon-holders;
+    }
+    .change-img
+    {
+      position: relative;
+      display: table;
+      margin: 2em auto 1em;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: $fifthColor;
+      cursor: pointer;
+      .overlay
+      {
+        position: absolute;
+        z-index: 3;
+        width: 150px;
+        height: 150px;
+        background-color: $thirdColor;
+        top: 100%;
+        left: 0;
+        transition: all .5s;
+        border-radius: 50%;
+        opacity: .8;
+        .icon-upload
+        {
+          position: absolute;
+          transform: translate(-50%,-50%);
+          top: 50%;
+          left: 50%;
+          width: 50px;
+          height: 50px;
+          filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(100deg) brightness(103%) contrast(101%);
+        }
+      }
+      .default-bg
+      {
+        position: relative;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: 135px;
+        background-repeat: no-repeat;
+      }
+      .default-pic
+      {
+        position: relative;
+        z-index: 2;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid $fifthColor;
+      }
+      &:hover .overlay
+      {
+        top: 0%;
+      }
+    }
+    .content
+    {
+      width: 40%;
+      margin: 0 auto;
+      .boxes
+      {
+        margin-bottom: 2em;
+        .title
+        {
+          color: $firstColor;
+          margin: 0;
+          font-size: 18px;
+        }
+        .inputs
+        {
+          outline: none;
+          border: none;
+          border-bottom: 2px solid $fifthColor;
+          background-color: $secondColor;
+          color: $fourthColor;
+          height: 45px;
+          width: 100%;
+          padding: 0 5px;
+          font-size: 18px;
+        }
+        //.-internal-autofill-selected
+        //{
+        //  background-color: transparent !important;
+        //}
+        input {
+          background-color: transparent !important;
+          color: #F5F4EF;
+        }
+        .material-icons
+        {
+          width: 25px;
+          height: 25px;
+          filter: invert(93%) sepia(2%) saturate(1785%) hue-rotate(320deg) brightness(110%) contrast(92%);
+          cursor: pointer;
+          margin-top: 12px;
+        }
+        ::placeholder
+        {
+          color: $fourthColor;
+        }
+      }
+      .password-box
+      {
+        margin-bottom: 1.5em;
+        .input-holder
+        {
+          display: flex;
+          flex-flow: row nowrap;
+          border-bottom: 2px solid $fifthColor;
+          .password-input
+          {
+            border: none;
+            margin: 0;
+          }
+        }
+      }
+      .login-box
+      {
+        text-align: right;
+        .title
+        {
+          color: $fourthColor;
+          font-size: 14px;
+          a
+          {
+            color: $firstColor;
+            transition: all .5s;
+            border-bottom: 1px solid $firstColor;
+            &:hover
+            {
+              color: #d59898;
+            }
+          }
+        }
+      }
+      .submit-box
+      {
+        text-align: center;
+        .submit
+        {
+          background-color: $firstColor;
+          color: $thirdColor;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-weight: bold;
+          padding: 10px 30px;
+          border-radius: 30px;
+          margin: 0 auto;
+          text-transform: uppercase;
+          transition: all .5s;
+          margin-top: 1em;
+          &:hover
+          {
+            background-color: #d59898;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Start Media Query //
+@include media-breakpoint-down(lg)
+{
+  .login
+  {
+    .content
+    {
+      width: 60% !important;
+    }
+  }
+}
+@include media-breakpoint-down(md)
+{
+  .login
+  {
+    .content
+    {
+      width: 70% !important;
+    }
+  }
+}
+@include media-breakpoint-down(sm)
+{
+  .login
+  {
+    .content
+    {
+      width: 80% !important;
+    }
+  }
+}
+// End Media Query //
+
+
