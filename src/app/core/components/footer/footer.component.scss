@@ -1,0 +1,28 @@
+@import "../../../../styles.scss";
+
+footer {
+  background-color: $thirdColor;
+  .copyrights {
+    text-align: center;
+    border-top: 2px solid $fifthColor;
+    padding: 2em 0;
+
+    span {
+      color: $fourthColor;
+      font-size: 14px;
+    }
+  }
+}
+
+// Start Media Query //
+@include media-breakpoint-down(lg) {
+  .holder {
+    padding-bottom: 2em !important;
+
+    .content {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+// End Media Query //
