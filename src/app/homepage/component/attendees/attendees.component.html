@@ -11,14 +11,17 @@
         <h3 class="title">Phone</h3>
         <input formControlName="phone" class="phone-input inputs" type="number" placeholder="Enter Your Phone">
       </section>
-      <button (click)="addCreds()">Add</button>
+      <section class="phone-box boxes col-12">
+        <h3 class="title" >Other People</h3>
+        <fa-icon (click)="addCreds()" class="fa"  [icon]="faPluSquare"></fa-icon>
+      </section>
       <div formArrayName="credentials" *ngFor="let creds of form.controls.credentials?.value; let i = index">
-      <ng-container [formGroupName]="i">
-        <section class="email-box boxes col-12">
-            <h3 class="title">Other People</h3>
-            <input class="email-input inputs" formControlName="other" type="email" placeholder="Enter Your Email">
-        </section>
-      </ng-container>
+        <ng-container [formGroupName]="i">
+          <section class="email-box boxes col-12">
+            <input class="email-input inputs" formControlName="other" type="email" placeholder="Enter Name">
+            <fa-icon class="fa" [icon]="faTrash"></fa-icon>
+          </section>
+        </ng-container>
       </div>
       <section class="submit-box">
         <input class="submit" type="submit" value="Submit">

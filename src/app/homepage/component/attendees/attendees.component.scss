@@ -96,6 +96,7 @@
           color: $firstColor;
           margin: 0;
           font-size: 18px;
+          display: inline;
         }
         .inputs
         {
@@ -108,6 +109,11 @@
           width: 100%;
           padding: 0 5px;
           font-size: 18px;
+        }
+        .fa
+        {
+          color: #FFBCBC;
+          float: right;
         }
         //.-internal-autofill-selected
         //{
