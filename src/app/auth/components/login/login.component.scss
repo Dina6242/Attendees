@@ -1,0 +1,144 @@
+@import "../../../../styles.scss";
+
+.login
+{
+  background-color: $secondColor;
+  position: relative;
+  .overlay
+  {
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: .5;
+  }
+  .holder
+  {
+    position: relative;
+    z-index: 3;
+    padding: 5em 0;
+    .main-title
+    {
+      @extend  %main-title-style;
+    }
+    .content
+    {
+      width: 40%;
+      margin: 0 auto;
+      .boxes
+      {
+        .title
+        {
+          color: $firstColor;
+          margin: 0;
+          font-size: 18px;
+        }
+        .inputs
+        {
+          outline: none;
+          border: none;
+          border-bottom: 2px solid $fifthColor;
+          background-color: $secondColor;
+          color: $fourthColor;
+          height: 45px;
+          width: 100%;
+          padding: 0 5px;
+          font-size: 18px;
+        }
+        .icon
+        {
+          width: 25px;
+          height: 25px;
+          filter: invert(93%) sepia(2%) saturate(1785%) hue-rotate(320deg) brightness(110%) contrast(92%);
+          cursor: pointer;
+          margin-top: 12px;
+        }
+        ::placeholder
+        {
+          color: $fourthColor;
+        }
+      }
+      .password-box
+      {
+        margin: 2em 0 1.5em;
+        .input-holder
+        {
+          display: flex;
+          flex-flow: row nowrap;
+          border-bottom: 2px solid $fifthColor;
+          .password-input
+          {
+            border: none;
+            margin: 0;
+          }
+        }
+      }
+      .register-box, .forgot-password-box
+      {
+        text-align: right;
+        .title
+        {
+          color: $fourthColor;
+          a
+          {
+            color: $firstColor;
+            transition: all .5s;
+            border-bottom: 1px solid $firstColor;
+            &:hover
+            {
+              color: #d59898;
+            }
+          }
+        }
+      }
+      .submit-box
+      {
+        text-align: center;
+        .submit
+        {
+          background-color: $firstColor;
+          color: $thirdColor;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-weight: bold;
+          padding: 10px 30px;
+          border-radius: 30px;
+          margin: 0 auto;
+          text-transform: uppercase;
+          transition: all .5s;
+          margin-top: 1em;
+          &:hover
+          {
+            background-color: #d59898;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Start Media Query //
+@include media-breakpoint-down(lg)
+{
+  .content
+  {
+    width: 60% !important;
+  }
+}
+@include media-breakpoint-down(md)
+{
+  .content
+  {
+    width: 70% !important;
+  }
+}
+@include media-breakpoint-down(sm)
+{
+  .content
+  {
+    width: 80% !important;
+  }
+}
+// End Media Query //

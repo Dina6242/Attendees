@@ -1,1 +1,22 @@
-<p>login works!</p>
+<article class="login">
+  <div class="overlay"></div>
+  <div class="holder">
+    <h2 class="main-title">Login</h2>
+
+    <form class="content row" [formGroup]="formLogin" (ngSubmit)="login()">
+      <section class="email-box boxes col-12">
+        <h3 class="title">Phone</h3>
+        <input formControlName="phone" class="email-input inputs" type="number" placeholder="Enter Your Phone">
+      </section>
+      <section class="password-box boxes col-12">
+        <h3 class="title">Password</h3>
+        <section class="input-holder">
+          <input formControlName="password" class="password-input inputs" type="password" placeholder="**********">
+        </section>
+      </section>
+      <section class="submit-box">
+        <input class="submit" type="submit" value="Log in">
+      </section>
+    </form>
+  </div>
+</article>
