@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AttendeesComponent } from './component/attendees/attendees.component';
 
-const routes: Routes = [{path: 'attendees', component: AttendeesComponent}];
+const routes: Routes = [{path: '', component: AttendeesComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
