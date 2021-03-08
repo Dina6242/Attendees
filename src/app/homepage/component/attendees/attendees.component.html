@@ -18,8 +18,8 @@
       <div formArrayName="credentials" *ngFor="let creds of form.controls.credentials?.value; let i = index">
         <ng-container [formGroupName]="i">
           <section class="email-box boxes col-12">
-            <input class="email-input inputs" formControlName="other" type="email" placeholder="Enter Name">
-            <fa-icon class="fa" [icon]="faTrash"></fa-icon>
+            <input class="email-input inputs" class="username-input inputs" formControlName="other" type="text" placeholder="Enter Name">
+            <fa-icon class="fa" (click)="removeCreds(i)" [icon]="faTrash"></fa-icon>
           </section>
         </ng-container>
       </div>

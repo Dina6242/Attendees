@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
-import {  faPlusSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-attendees',
@@ -29,6 +29,11 @@ export class AttendeesComponent implements OnInit {
     creds.push(this.fb.group({
       other: '',
     }));
+  }
+
+  removeCreds(index: number): void {
+    const creds = this.form.controls.credentials as FormArray;
+    creds.removeAt(index);
   }
 
   onSubmit(): void {
